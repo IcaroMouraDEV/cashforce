@@ -3,7 +3,7 @@ import db from '.';
 import CNPJModel from './CNPJModel';
 // import OtherModel from './OtherModel';
 
-class BuyerModel extends Model {
+class SponsorModel extends Model {
   // declare <campo>: <tipo>;
   declare id: number;
   declare name: string;
@@ -22,6 +22,10 @@ class BuyerModel extends Model {
   declare neighborhood: string;
   declare city: string;
   declare state: string;
+  declare bank: string;
+  declare bankAgency: string;
+  declare account: string;
+  declare documents: string;
   declare phoneNumber: string;
   declare situation: string;
   declare situationDate: string;
@@ -32,7 +36,7 @@ class BuyerModel extends Model {
   declare email: string;
 }
 
-BuyerModel.init({
+SponsorModel.init({
   id: {
     primaryKey: true,
     type: DataTypes.INTEGER,
@@ -54,6 +58,10 @@ BuyerModel.init({
   neighborhood: { type: DataTypes.STRING, defaultValue: null },
   city: { type: DataTypes.STRING, defaultValue: null },
   state: { type: DataTypes.STRING, defaultValue: null },
+  bank: { type: DataTypes.STRING, defaultValue: null },
+  bankAgency: { type: DataTypes.STRING, defaultValue: null },
+  account: { type: DataTypes.STRING, defaultValue: null },
+  documents: { type: DataTypes.STRING, defaultValue: null },
   phoneNumber: { type: DataTypes.STRING, defaultValue: null },
   situation: { type: DataTypes.STRING, defaultValue: null },
   situationDate: { type: DataTypes.STRING, defaultValue: null },
@@ -72,14 +80,14 @@ BuyerModel.init({
   confirm: { type: DataTypes.BOOLEAN, defaultValue: true },
   email: { type: DataTypes.STRING, defaultValue: null },
 }, {
-  tableName: 'buyers',
+  tableName: 'sponsors',
   underscored: false,
   sequelize: db,
   timestamps: true,
 });
 
-CNPJModel.hasMany(BuyerModel, { foreignKey: 'cnpjId' });
+CNPJModel.hasMany(SponsorModel, { foreignKey: 'cnpjId' });
 
-BuyerModel.belongsTo(CNPJModel, { foreignKey: 'cnpjId', as: 'cnpj' });
+SponsorModel.belongsTo(CNPJModel, { foreignKey: 'cnpjId', as: 'cnpj' });
 
-export default BuyerModel;
+export default SponsorModel;
