@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&display=swap');
+
+body {
+  background-color: #fbfdfe;
+}
+
+.propostas {
+  display: flex;
+}
+
+.financiador {
+  width: 20%; 
+}
+
+.fornecedor {
+  /*  */
+}
+
+.menu-hero {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-hero img {
+  width: 160px;
+  height: 30px;
+}
+
+.hero {
+  padding: 25px 104px 25px 24px;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.header {
+  background-color: white;
+  border: 1px solid white;
+  border-bottom: 1px solid  #DFE2EB;
+  border-radius: 12px 0px 0px 0px;
+  overflow: hidden;
+}
+
+.table {
+  background-color: white;
+  font-family: 'DM Sans';
+  font-weight: 500;
+  font-style: normal;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.table table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0px 10px;
+}
+
+h2 {
+  padding-top: 12px;
+  font-weight: 700;
+}
+
+h2 img {
+  width: 24px
+}
+
+.row-item {
+  display: flex;
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 20px;
+  gap: 10px;
+  color: #00AD8C;
+  border-left: 4px solid #00AD8C;
+  border-radius: 4px;
+}
+
+.row-item img {
+  height: 14px;
+  width: 24px;
+}
+
+.row-item h3 {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+
+p {
+  color: #727D94;
+  font-weight: 400;
+  font-size: 14px;
+  padding-bottom: 22px;
+}
+
+.table tr {
+  font-size: 12px;
+  color: #A1A8B8;
+}
+
+.table .item {
+  color: black;
+  font-size: 12px;
+}
+
+.status {
+  font-weight: 700;
+}
+
+.table .item td {
+  padding: 10px 20px;
+  /* border: 1px solid white; */
+  border-top: 1px solid  #DFE2EB;
+  border-bottom: 1px solid  #DFE2EB;
+}
+
+.table .item button {
+  background-color: white;
+  border: 1px solid #CAD3FF;
+  border-radius: 24px;
+  padding: 8px 20px;
+}
+
+.left {
+  border-radius: 6px 0 0 6px;
+  border-left: 1px solid  #DFE2EB;
+}
+
+.right {
+  border-radius: 0 6px 6px 0;
+  border-right: 1px solid  #DFE2EB;
+}
+
+.green {
+  color: #00AD8C;
+}
